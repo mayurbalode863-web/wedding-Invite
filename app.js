@@ -331,7 +331,7 @@ window.addEventListener("load", () => {
     }
 });
 
-// play after first interaction if blocked
+// play fter first interaction if blocked
 function startMusicOnce() {
     bgMusic.play();
     document.removeEventListener("click", startMusicOnce);
