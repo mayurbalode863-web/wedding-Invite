@@ -316,7 +316,7 @@ document.querySelectorAll('a[href^="#"]').forEach(a => {
 const bgMusic = document.getElementById("bgMusic");
 
 // volume control
-bgMusic.volume = 0.5;
+bgMusic.volume = 0.05;
 
 // try autoplay on page load
 window.addEventListener("load", () => {
