@@ -313,3 +313,27 @@ document.querySelectorAll('a[href^="#"]').forEach(a => {
     obs.observe(sec);
   });
 })();
+const bgMusic = document.getElementById("bgMusic");
+
+// volume control
+bgMusic.volume = 0.15;
+
+// try autoplay on page load
+window.addEventListener("load", () => {
+    const playPromise = bgMusic.play();
+
+    if (playPromise !== undefined) {
+        playPromise.catch(() => {
+            // autoplay blocked by browser
+            document.addEventListener("click", startMusicOnce);
+            document.addEventListener("touchstart", startMusicOnce);
+        });
+    }
+});
+
+// play after first interaction if blocked
+function startMusicOnce() {
+    bgMusic.play();
+    document.removeEventListener("click", startMusicOnce);
+    document.removeEventListener("touchstart", startMusicOnce);
+}
