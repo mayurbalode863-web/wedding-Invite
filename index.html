@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title> Saloni & Aditya — Wedding Invitation</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=EB+Garamond:ital,wght@0,400;0,500;1,400&family=Cinzel+Decorative:wght@400;700&family=Jost:wght@200;300;400&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+
+<!-- ═══════════════════════════════════════════════
+     PETAL PARTICLES
+═══════════════════════════════════════════════ -->
+<div id="petals-container"></div>
+
+<!-- ═══════════════════════════════════════════════
+     HERO SECTION
+═══════════════════════════════════════════════ -->
+<section class="hero">
+  <div class="hero-overlay"></div>
+  <div class="hero-content">
+    <p class="hero-prelude reveal-up">— Together Forever —</p>
+    <h1 class="hero-names reveal-up" style="animation-delay:.3s">
+      Saloni<span class="ampersand"> &amp; </span> Aditya
+    </h1>
+    <p class="hero-sub reveal-up" style="animation-delay:.6s">Request the pleasure of your company<br>at their wedding celebration</p>
+    <div class="hero-divider reveal-up" style="animation-delay:.8s">
+      <span></span><span class="diamond">◆</span><span></span>
+    </div>
+    <p class="hero-date-hint reveal-up" style="animation-delay:1s">Scratch below to reveal the date</p>
+    <div class="scroll-cue reveal-up" style="animation-delay:1.2s">
+      <span></span><span></span><span></span>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════
+     SCRATCH CARD
+═══════════════════════════════════════════════ -->
+<section class="scratch-section">
+  <div class="scratch-wrapper">
+    <p class="scratch-label">Swipe to Reveal</p>
+    <div class="scratch-outer">
+      <div class="scratch-revealed" id="scratchRevealed">
+        <div class="revealed-inner">
+          <p class="rev-pre">Save The Date</p>
+          <p class="rev-day">Friday</p>
+          <h2 class="rev-date">08 May 2026</h2>
+          <p class="rev-venue">Swastik Lawns, Sillod</p>
+          <div class="rev-divider"><span></span><span>❧</span><span></span></div>
+          <p class="rev-note">1:30 PM Onwards</p>
+        </div>
+      </div>
+      <canvas id="scratchCanvas"></canvas>
+    </div>
+    <p class="scratch-hint" id="scratchHint">✦ Drag your finger or mouse across the card ✦</p>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════
+     COUNTDOWN TIMER
+═══════════════════════════════════════════════ -->
+<section class="countdown-section">
+  <div class="section-inner">
+    <p class="section-label">Counting Down To</p>
+    <h2 class="section-heading">Our Special Day</h2>
+    <div class="countdown-grid" id="countdown">
+      <div class="countdown-block">
+        <span class="cd-num" id="cd-days">00</span>
+        <span class="cd-label">Days</span>
+      </div>
+      <div class="cd-sep">:</div>
+      <div class="countdown-block">
+        <span class="cd-num" id="cd-hours">00</span>
+        <span class="cd-label">Hours</span>
+      </div>
+      <div class="cd-sep">:</div>
+      <div class="countdown-block">
+        <span class="cd-num" id="cd-mins">00</span>
+        <span class="cd-label">Minutes</span>
+      </div>
+      <div class="cd-sep">:</div>
+      <div class="countdown-block">
+        <span class="cd-num" id="cd-secs">00</span>
+        <span class="cd-label">Seconds</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════
+     QUOTE / VERSE
+═══════════════════════════════════════════════ -->
+<section class="quote-section">
+  <div class="quote-inner">
+    <p class="quote-mark">"</p>
+    <blockquote>
+      तुम मेरे पास हो तो यह एहसास है मुझे,<br>
+      कि मेरी जिंदगी में बहुत कुछ खास है।
+    </blockquote>
+    <p class="quote-trans">You are near me, and I feel this — that in my life there is something truly precious.</p>
+    <div class="quote-rule"><span></span><span>◆</span><span></span></div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════
+     TIMELINE
+═══════════════════════════════════════════════ -->
+<section class="timeline-section">
+  <div class="section-inner">
+    <p class="section-label">The Day's Journey</p>
+    <h2 class="section-heading">Event Schedule</h2>
+    <div class="timeline">
+
+      <div class="tl-item tl-left" data-scroll>
+        <div class="tl-content">
+          <span class="tl-time">12:05 pm</span>
+          <h3 class="tl-title">Guest Arrival</h3>
+          <p class="tl-desc">Welcome drinks & floral décor. Greet family and friends as you arrive at the beautifully adorned venue entrance.</p>
+        </div>
+        <div class="tl-dot"><span>🌸</span></div>
+        <div class="tl-spacer"></div>
+      </div>
+
+      <div class="tl-item tl-right" data-scroll>
+        <div class="tl-spacer"></div>
+        <div class="tl-dot"><span>🕯️</span></div>
+        <div class="tl-content">
+          <span class="tl-time">1:30 PM</span>
+          <h3 class="tl-title">Jaimala Ceremony</h3>
+          <p class="tl-desc">The sacred garland exchange. Aarav & Priya garland each other as the shehnai plays and blessings pour in.</p>
+        </div>
+      </div>
+
+  
+      <div class="tl-item tl-left" data-scroll>
+        <div class="tl-content">
+          <span class="tl-time">4:30 PM</span>
+          <h3 class="tl-title">Vidaai & Farewell</h3>
+          <p class="tl-desc">A bittersweet farewell as the couple begins their new journey together, showered in rose petals.</p>
+        </div>
+        <div class="tl-dot"><span>🌹</span></div>
+        <div class="tl-spacer"></div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════
+     VENUE / MAP
+═══════════════════════════════════════════════ -->
+<section class="venue-section">
+  <div class="section-inner">
+    <p class="section-label">Come Find Us</p>
+    <h2 class="section-heading">The Venue</h2>
+
+    <div class="venue-card">
+      
+      <div class="venue-details">
+        <div class="venue-icon">🏛️</div>
+        
+        <h3 class="venue-name">Swastik Lawns</h3>
+        
+        <p class="venue-addr">
+          Swastik Lawns,<br>
+          Sillod — 431112, Maharashtra
+        </p>
+
+        <div class="venue-pills">
+          <span>📅 08 May 2026</span>
+          <span>⏰ 1:30 pm</span>
+          <span>🅿️ Parking Available</span>
+        </div>
+
+        <a class="venue-btn"
+           href="https://www.google.com/maps/search/?api=1&query=Swastik+Lawns+Sillod+431112"
+           target="_blank">
+          Open in Google Maps →
+        </a>
+      </div>
+
+      <div class="venue-map">
+        <iframe 
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3741.2496550191213!2d75.6593678!3d20.331302599999997!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bdbd25dba25b27b%3A0xa879259702189262!2sSwastik%20Lawns!5e0!3m2!1sen!2sin!4v1775061343871!5m2!1sen!2sin"
+          width="100%"
+          height="400"
+          style="border:0;"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+          title="Swastik Lawns Location">
+        </iframe>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════
+     DRESS CODE
+═══════════════════════════════════════════════ -->
+
+<!-- ═══════════════════════════════════════════════
+     GALLERY MOSAIC
+═══════════════════════════════════════════════ -->
+<section class="gallery-section">
+  <div class="section-inner">
+    <p class="section-label">Our Story</p>
+    <h2 class="section-heading">Moments We Cherish</h2>
+
+    <div class="gallery-mosaic">
+
+      <!-- Tall Image -->
+      <div class="mosaic-card tall" 
+           style="border-radius:18px; overflow:hidden; position:relative;">
+        <img src="salu2.1.jpeg" 
+             alt="Where it began"
+             style="width:100%; height:100%; object-fit:cover; display:block; transition:0.5s;">
+      </div>
+
+      <!-- Normal Image -->
+      <div class="mosaic-card" 
+           style="border-radius:18px; overflow:hidden; position:relative;">
+        <img src="salu1.png" 
+             alt="The proposal"
+             style="width:100%; height:100%; object-fit:cover; display:block; transition:0.5s;">
+      </div>
+
+      <div class="mosaic-card" 
+           style="border-radius:18px; overflow:hidden; position:relative;">
+        <img src="salu4.jpeg" 
+             alt="Our engagement"
+             style="width:100%; height:100%; object-fit:cover; display:block; transition:0.5s;">
+      </div>
+
+      <!-- Wide Image -->
+      <div class="mosaic-card wide" 
+           style="border-radius:18px; overflow:hidden; position:relative;">
+        <img src="salu5.png" 
+             alt="Celebrating love"
+             style="width:100%; height:100%; object-fit:cover; display:block; transition:0.5s;">
+      </div>
+
+   
+    </div>
+
+    <p class="gallery-note">The Golden Movement Of Engagement✦</p>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════
+     RSVP
+═══════════════════════════════════════════════ -->
+
+ 
+
+<!-- ═══════════════════════════════════════════════
+     FOOTER
+═══════════════════════════════════════════════ -->
+<footer class="footer">
+  <div class="footer-inner">
+    <h2 class="footer-names">Saloni & Aditya</h2>
+    <p class="footer-date">08 · May · 2026</p>
+    <div class="footer-divider"><span></span><span>◆</span><span></span></div>
+    <p class="footer-blessing">
+      विवाह में आपका स्वागत है<br>
+      <em>May our home always be filled with love, laughter, and light.</em>
+    </p>
+    <p class="footer-credits">Crafted with ♥ for a lifetime celebration</p>
+
+  </div>
+</footer>
+
+<script src="app.js"></script>
+</body>
+</html>
